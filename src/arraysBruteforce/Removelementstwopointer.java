@@ -14,8 +14,8 @@ Return k after placing the final result in the first k slots of nums.
 Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
  *Pesudocode :
- *1)Take 2 pointers (slow and fast )
- *
+ *1)Take 2 pointers (left and right )slow at first index and fast at last index
+ *2)
  *
  *
  */
@@ -27,21 +27,38 @@ public class Removelementstwopointer {
 	{
 		int[] nums= {2,1,2,2,3,0,4,2};
 		int target =2;
-		System.out.println(removeElemts(nums,target));
-		removeElemts(nums,target);
+		//System.out.println(removeElemts(nums,target));
+		//removeElemts(nums,target);
 		// o/p: [0,1,4,0,3,_,_,_]
 	}
 
 	@Test
 	public void example2()
 	{
-		int[] nums= {0};	
+		int[] nums= {0};
+		int target=2;
+		//removeElemts(nums,target);
 	}
 
 	@Test
 	public void example3()
 	{
-
+		int[] nums= {};
+		int target=2;
+		//removeElemts(nums,target);
+	}
+	
+	public void example4()
+	{
+		int[] nums= {2,2,2,2,2};
+		int target=2;
+	}
+	
+	public void example5()
+	{
+		int[] nums= {1,0,1};
+		int target=2;
+		removeElemts(nums,target);
 	}
 
 	private int removeElemts(int[] nums, int target) 
@@ -50,7 +67,7 @@ public class Removelementstwopointer {
 		int counter=0;
 		while(left<right)
 		{
-
+  //{2,1,2,2,3,0,4,2};
 			if(nums[left]==target && nums[right] ==target)
 			{
 				right--;
