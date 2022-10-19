@@ -151,7 +151,7 @@ public class Checkdoubleexists {
 		{
 			
 		//if(hm.containsKey(arr[left]*2)) 
-		if(hm.containsKey(arr[left]*2) || (arr[left]%2==0 && hm.containsKey(arr[left]/20)))
+		if(hm.containsKey(arr[left]*2) || (arr[left]%2==0 && hm.containsKey(arr[left]/2>0)))
 		{
 			return true;
 		}
