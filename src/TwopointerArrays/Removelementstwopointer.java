@@ -1,4 +1,4 @@
-package arraysBruteforce;
+package TwopointerArrays;
 
 import java.util.Arrays;
 

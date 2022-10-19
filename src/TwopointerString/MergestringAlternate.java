@@ -1,4 +1,4 @@
-package arraysBruteforce;
+package TwopointerString;
 
 import org.junit.Test;
 

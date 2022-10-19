@@ -1,17 +1,12 @@
-package arraysBruteforce;
+package TwopointerArrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.IntStream;
 
 import org.junit.Test;
 
-public class ArrayIntersection {
-
-	private static final boolean Ispresent = false;
+public class addthreeConsecutiveindex 
+{
+	
 	/*
 	 * Given 2 int sorted arrays, print the intersection elements 
 	 * of two arrays 
@@ -70,63 +65,31 @@ public class ArrayIntersection {
 	 * 
 	 * 10. If it fails then debug to solve it
 	 */
+
 	@Test
-	public void positive() {
+	public void example()
 
-		int[] arr1 = {1,2,2,1};
-		int[] arr2 = {2,2};
-
-		//intersection(arr1,arr2);
-
-	}
-	@Test
-	public void positive1() {
-
-		int[] arr1 = {1,2,2,1};
-		int[] arr2 = {2,2};
-
-		//intersection(arr1,arr2);
-
-	}
-	@Test
-	public void edge() {
-
-		int[] arr1 = {};
-		int[] arr2 = {2,2};
-
-		intersection(arr1,arr2);
-
-	}
-	public int[] intersection(int[] arr1, int[] arr2)
 	{
-		//if(arr1.length <0 || arr2.length <0) return new int[]{};
-
-		int p1=0,p2=0,k=0;
-		int[] target = null ;
-		Set<Integer> set = new HashSet<Integer>(); 
-		
-
-		while(arr1.length<arr2.length &&p1<arr1.length)
-		{		
-			if(arr1[p1]==arr2[p2])
-			{	
-				set.add(arr2[p2++]);
-			}
-			p1++;
-			if(arr1.length ==0 ||arr2.length==0)return target;
-		    target = new int[set.size()];	
-		    for(Integer i: set) {
-			target[k++] = i;
-		}
-	/*
-	 * while(arr1.length>arr2.length && p2<arr2.length) { if(arr2[p2]==arr1[p1]) {
-	 * set.add(arr1[p1++]); } p2++;
-	 * 
-	 * for (Integer i: set) { target[k++] = i; }}
-	 * 
-	 * System.out.println(Arrays.toString(target)); 
-	 */
-		System.out.println(Arrays.toString(target)); 	
-	}return target;
+		int[] nums = {2,3,3,1,2,4};
+		int position =3;
+		// output ={8,7,6,7}
+		//System.out.println(Arrays.toString(addthreeindexvalues(nums,position)));
+		addthreeindexvalues(nums,position);
 	}
-		}
+
+	//output :{2,3,3,1,2,4};
+	public int[] addthreeindexvalues(int[] nums,int position) 
+	{
+
+		int i=0;
+		int left=0 ,right=left+1,k=right+1;
+		int n=nums.length;
+		int newArray[] =new int[n-2];
+		while(left<=n-position && right<=(n-2))
+		{
+			newArray[i++]=nums[left++]+nums[right++]+nums[k++];
+			  	
+		} 	
+		System.out.println(Arrays.toString(newArray));
+		return newArray;
+	}}

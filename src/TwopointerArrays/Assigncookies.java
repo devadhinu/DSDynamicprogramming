@@ -1,4 +1,4 @@
-package arraysBruteforce;
+package TwopointerArrays;
 
 import java.util.Arrays;
 
@@ -69,7 +69,7 @@ public class Assigncookies {
 	}
 
 	public int findContentChildren(int[] g, int[] s) {
-	Arrays.sort(s);
+	    Arrays.sort(s);
 		Arrays.sort(g);
 		int p1 = 0, p2 = 0, count = 0;
 		while(p2<s.length && p1<g.length)
@@ -105,6 +105,13 @@ public class Assigncookies {
 //		 } System.out.println(count);
 //		 return count;
 		 
+		
+		/*
+		 * int p1=0,p2=0,count=0; while(p1<s.length && p2<g.length) { if(s[p1]==g[p2]) {
+		 * p1++; p2++; count++; } else if(s[p1]!=g[p2]) { p2++; }
+		 * 
+		 * } System.out.println(count); return count;
+		 */
 
 	}
 }
