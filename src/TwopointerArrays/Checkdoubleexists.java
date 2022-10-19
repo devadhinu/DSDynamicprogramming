@@ -1,5 +1,7 @@
 package TwopointerArrays;
 
+import org.junit.Assert; 
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -128,7 +130,10 @@ public class Checkdoubleexists {
 		int[] arr = {-2,0,10,-19,4,6,-8};
 
 		//Output: false
-		System.out.println(ifDoublevalueexist(arr));
+		
+		boolean output=false;
+		Assert.assertEquals(ifDoublevalueexist(arr), false);
+		
 	}
 
 
