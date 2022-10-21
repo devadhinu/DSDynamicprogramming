@@ -76,14 +76,14 @@ public class ArrayIntersection {
 		int[] arr1 = {1,2,2,1};
 		int[] arr2 = {2,2};
 
-		intersection(arr1,arr2);
+		//intersection(arr1,arr2);
 
 	}
 	@Test
 	public void positive1() {
 
-		int[] arr1 = {1,2,2,1};
-		int[] arr2 = {2,2};
+		int[] arr1 = {4,9,5};
+		int[] arr2 = {9,4,9,8,4};
 
 		//intersection(arr1,arr2);
 
@@ -91,45 +91,41 @@ public class ArrayIntersection {
 	@Test
 	public void edge() {
 
-		int[] arr1 = {2};
-		int[] arr2 = {2,2};
+		int[] arr1 = {1,2};
+		int[] arr2 = {1,1};
 
-		//intersection(arr1,arr2);
+		intersection(arr1,arr2);
 
 	}
 	public int[] intersection(int[] arr1, int[] arr2)
 	{
 		//if(arr1.length <0 || arr2.length <0) return new int[]{};
-
+        Arrays.sort(arr2);
+        Arrays.sort(arr1);
 		int p1=0,p2=0,k=0;
 		int[] target = null ;
+		
 		Set<Integer> set = new HashSet<Integer>(); 
-
-
-		while(arr1.length<arr2.length || arr1.length>arr2.length)
-		{		
-			if(p1<arr1.length)
+		if(arr1.length ==0 ||arr2.length==0)return target;
+			while(p1<arr1.length && p2<arr2.length)
 			{
+				if(arr1[p1]>arr2[p2])p2++;
 				if(arr1[p1]==arr2[p2])
 				{	
-					set.add(arr2[p2++]);
+					set.add(arr2[p2]);
+					p2++;
 				}
 				p1++;
-				if(arr1.length ==0 ||arr2.length==0)return target;
-				target = new int[set.size()];	
-				for(Integer i: set) 
-				{
-					target[k++] = i;
-				}
 			}
-			
-			  if(p2<arr2.length) { if(arr2[p2]==arr1[p1]) { set.add(arr1[p1++]); } p2++;
-			  target = new int[set.size()];
-			  for (Integer i: set) { target[k++] = i; } }
-			  
-			  
-			 
+			target = new int[set.size()];	
+			for(Integer i: set) 
+			{
+				target[k++] = i;
+			}
+
 			System.out.println(Arrays.toString(target)); 	
-		}return target;
+			return target;
+
+		}
 	}
-}
+
