@@ -92,4 +92,10 @@ public class addthreeConsecutiveindex
 		} 	
 		System.out.println(Arrays.toString(newArray));
 		return newArray;
-	}}
+	}
+	
+
+
+
+
+}
