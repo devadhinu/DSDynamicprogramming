@@ -37,24 +37,36 @@ public class SortDescusingdutchflagAlgorithm {
 		int low=0,mid=nums.length-1,high=nums.length-1;
 		//0,1,2
 		
-		while(mid<=high)
+		while(mid>=low)
 		{
 			if(nums[mid]==0) 
 			{
 				int temp =nums[mid];
 				nums[mid--]=nums[high];
-				nums[high]=temp;
+				nums[high--]=temp;
 			}
 
-			else if (nums[mid]==1)mid++;
+			else if (nums[mid]==1)mid--;
 			
 			else if(nums[mid]==2)
 			{
 				int temp =nums[low];
 				nums[low++]=nums[mid];
-				nums[mid--]=temp;
+				nums[mid]=temp;
 				
 			}
+			
+			/*
+			 * if(nums[mid]==0) { int temp =nums[mid]; nums[mid--]=nums[high];
+			 * nums[high]=temp; }
+			 * 
+			 * else if (nums[mid]==1)mid++;
+			 * 
+			 * else if(nums[mid]==2) { int temp =nums[low]; nums[low++]=nums[mid];
+			 * nums[mid--]=temp;
+			 * 
+			 * }
+			 */
 			
 		}
 		return nums;
