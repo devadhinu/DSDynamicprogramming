@@ -3,26 +3,29 @@ package slidingwindow;
 import org.junit.Test;
 
 public class MaximumproductsubArray {
+	
+	
+	
 
 	@Test
 	public void edge2()
 	{
 		int[] nums= {2,3,-2,4};//6
-			System.out.println(maxProduct(nums));
+			System.out.println(maxProductusingkandane(nums));
 	}
 
 	@Test
 	public void edge3()
 	{
 		int[] nums= {-2,0,-1};//0
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 	}
 
 	@Test
 	public void edge4()
 	{
 		int[] nums= {-4,-3};//12
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 	}
 	@Test
 	public void edge5
@@ -30,14 +33,14 @@ public class MaximumproductsubArray {
 	{
 		int[] nums= {0,2};//2
 		//output=2 
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 
 	}
 	@Test
 	public void edge6()
 	{
 		int[] nums= {-2,3,-4};//24
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 
 	}
 	@Test
@@ -45,22 +48,22 @@ public class MaximumproductsubArray {
 	()
 	{
 		int[] nums= {-3,0,1,-2};//1
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 	}
 	@Test
 	public void edge8()
 	{
-		int[] nums= {5};
+		int[] nums= {5};//5
 		//output=5
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 	}
 
 	@Test
 	public void edge9()
 	{
-		int[] nums= {2,-5,-2,-4,3};
+		int[] nums= {2,-5,-2,-4,3};//24
 		//output=24
-		System.out.println(maxProduct(nums));
+		System.out.println(maxProductusingkandane(nums));
 	}
 
 	//not working for all test cases .Has not included check for consecutive 3 or 4 elements in a array.
@@ -126,6 +129,33 @@ public class MaximumproductsubArray {
 			left++;
 		}
 
+
+		return max;
+
+
+	}
+	
+	
+	//maximum product using kandane algorithm
+	public int maxProductusingkandane(int[] nums)
+	{
+		int left=0,right=1;
+		int product=1;	
+		int max=Integer.MIN_VALUE;
+		int temp=Integer.MIN_VALUE;
+		
+       while(left<nums.length-1)
+       {
+    	   
+    	   product*=nums[left++];
+    	   
+    	   if(product==0)product=0;
+    	   if(product<0)product=1;
+           
+           max = Math.max(max, product);
+    	  
+       } 
+       
 
 		return max;
 

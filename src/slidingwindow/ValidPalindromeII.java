@@ -78,48 +78,74 @@ public class ValidPalindromeII
 
 		return false;
 	}
+	//using expand from center approach
+	/*
+	 * public boolean validPalindrome(String s) {
+	 * 
+	 * int n=s.length(); 
+	 * char[] nums=s.toCharArray();
+	 * int left,right; 
+	 * if(n%2==0) 
+	 * {
+	 * left= n/2-1; 
+	 * right=n/2; 
+	 * } 
+	 * else { 
+	 * left=n/2;
+	 * right=n/2; 
+	 * }
+	 * 
+	 * while(left>0 && right<s.length())
+	 * if(s.charAt(left)==s.charAt(right)) 
+	 * {
+	 * left--; right++; 
+	 * }
+	 * 
+	 * else
+	 * { 
+	 * return isPalindrome(s,left-n/2,left) || isPalindrome(s,right,right+n/2); 
+	 * } 
+	 * return true;
+	 * 
+	 * }
+	 * 
+	 * private boolean isPalindrome(String s, int left, int right) 
+	 * {
+	 * 
+	 * while(left>=0 && right<=s.length())
+	 * { 
+	 * if(s.charAt(left)!=s.charAt(right))
+	 * {
+	 * left--; right++; 
+	 * return false;
+	 *  }
+	 * } 
+	 * return true; 
+	 * }
+	 */
 
+//2 pointers from 0 and n-1 position 	
 	public boolean validPalindrome(String s)
 	{
+		int left = 0, right = s.length() - 1;
 
-		int n=s.length();
-		char[] nums=s.toCharArray();
-		int left,right;
-		if(n%2==0)
-		{
-			left= n/2-1; right=n/2;
-		}
-		else {
-			left=n/2;right=n/2;
-		}
+		while(left<right) {
 
-		while(left>0 && right<s.length())
-			if(s.charAt(left)==s.charAt(right))
-			{
-				left--;
-				right++;
+			if(s.charAt(left)==s.charAt(right)) {
+				left++;
+				right--;
 			}
-
-			else {
-				return isPalindrome(s,left-n/2,left) || isPalindrome(s,right,right+n/2);
-			}
-        return true;
+			else
+				return isPalindrome(s, left+1, right) || isPalindrome(s, left, right-1);
+		}
+		return true;
 	}
 
-	private boolean isPalindrome(String s, int left, int right) 
-	{
-
-		while(left>=0 && right<=s.length())
-		{
-			if(s.charAt(left)!=s.charAt(right))
-			{
-				left--;
-				right++;
+	private boolean isPalindrome(String s, int left, int right) {
+		while(left<right) {
+			if(s.charAt(left++) != s.charAt(right--)){
 				return false;
 			}
-
-
-
 		}
 		return true;
 	}

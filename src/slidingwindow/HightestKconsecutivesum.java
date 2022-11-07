@@ -3,8 +3,11 @@ package slidingwindow;
 import org.junit.Test;
 
 /*
- * Given a array of integers and a number k 
+ * Given a array of integers and a number k  
+ * Return the highest sum of any k consecutive elements in the array
  * 
+ * Input : [1,5,2,3,7,1]
+ * Target : 3
  * 
  */
 

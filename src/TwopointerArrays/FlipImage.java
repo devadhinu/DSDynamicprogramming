@@ -49,15 +49,16 @@ public class FlipImage {
 
 
 
-//Optimised solution :
+//Optimised solution :(not working in leetcode)
 	
 	 public int[][] flipAndInvertImage(int[][] image)
 	{
 		
-		 int left=0 ,right=image.length-1;
+		 
 		 for(int i=0;i<image.length;i++)
 		 {
-			while(left<right)
+			 int left=0 ,right=image.length-1;
+			 while(left<=right)
 			{
 				
 				if(image[i][left] == image[i][right])

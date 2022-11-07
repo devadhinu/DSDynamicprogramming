@@ -1,5 +1,6 @@
 package TwopointerArrays;
 
+//solved during weekend assessment 29/10/2022
 public class IntegertoSumofNozeroIntegers {
 	
 	 // Pseudocode:
