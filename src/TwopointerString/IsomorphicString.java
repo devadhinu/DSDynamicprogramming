@@ -73,6 +73,7 @@ public class IsomorphicString {
 				else return false;
 			}
 			
+			
 			if(!hm.containsValue(t.charAt(i)))
 			{
 				hm.put(s.charAt(i),t.charAt(i));
