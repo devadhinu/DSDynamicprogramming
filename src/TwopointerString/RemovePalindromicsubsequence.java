@@ -36,6 +36,11 @@ public class RemovePalindromicsubsequence {
 	 * 
 	 * 1 <= s.length <= 1000 s[i] is either 'a' or 'b'.
 	 */
+	/*
+	 * Pseudocode :
+	 * 
+	 * 
+	 */
 	@Test
 	public void positive() {
 		//Positive Test Data
