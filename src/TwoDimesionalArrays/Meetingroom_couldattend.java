@@ -54,6 +54,21 @@ public class Meetingroom_couldattend {
 		boolean output = true;
 		Assert.assertEquals(meetings(nums), output);
 	}
+	
+//	Pseudocode:
+//    ===========		
+//	  1)To identify whether the person can attend meeting
+//    2)Check the first meeting end time falls after the second meeting start time
+//    3)If there is no conflict return true
+//    4)Sort the Array to find the first meeting and other meeting order
+//
+//     L        R
+//	 a[0][0]  a[0][1] 
+//   	0	    30
+//   a[1][0]  a[1][1]
+//	    5	    10
+//   a[2][0]  a[2][1]
+//      15      20
 
 	public boolean meetings(int[][] nums) 
 	{
