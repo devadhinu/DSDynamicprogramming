@@ -9,12 +9,7 @@ public class SubArraysumequalstoK {
 	/*
 	 * https://leetcode.com/problems/subarray-sum-equals-k/
 	 * 560. Subarray Sum Equals K Medium
-	 * 
-	 * 16126
-	 * 
-	 * 478
-	 * 
-	 * Add to List
+	 
 	 * 
 	 * Share Given an array of integers nums and an integer k, return the total
 	 * number of subarrays whose sum equals to k.
@@ -24,12 +19,12 @@ public class SubArraysumequalstoK {
 	 * 
 	 * 
 	 * Continuous Subarray Sum
-Subarray Product Less Than K
-Find Pivot Index
-Subarray Sums Divisible by K
-Minimum Operations to Reduce X to Zero
-K Radius Subarray Averages
-Maximum Sum Score of Array
+       Subarray Product Less Than K
+       Find Pivot Index
+       Subarray Sums Divisible by K
+       Minimum Operations to Reduce X to Zero
+       K Radius Subarray Averages
+       Maximum Sum Score of Array
 	 * 
 	 * 
 	 */
