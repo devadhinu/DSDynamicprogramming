@@ -101,6 +101,8 @@ public class Countrepeatingsequnces {
 		int left=0,right=1;
 
 		int count=0,sum=0;
+		
+		int mincount=0;
 
 		char[] ch =s.toCharArray();
 
@@ -108,20 +110,17 @@ public class Countrepeatingsequnces {
 		{
 			if(ch[right]==ch[left])
 			{
-				count=1;
-				sum+=count;
-
+				
+				if(right-left>=1)count=1;
 			}
 			else if(ch[right]!=ch[left]) //aaabbbccaaad
 			{
 				left=right;
-				count=0;
 			}
 			right++;
-			
 		}
-
-
+		sum+=count;	
+		
 		return sum;
 
 
