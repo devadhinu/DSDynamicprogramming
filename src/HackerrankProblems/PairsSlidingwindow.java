@@ -50,7 +50,22 @@ public class PairsSlidingwindow {
 		//op : 3
 		System.out.println(pairs(k,arr));
 	}
-
+	@Test
+	public void example2()
+	{
+		int[] arr = {1,3,5,8,6,4,2};
+		int k=2;
+		//op : 5
+		System.out.println(pairs(k,arr));
+	}
+	@Test
+	public void example3()
+	{
+		int[] arr = {363374326,364147530,61825163,1073065718,1281246024,1399469912,428047635,491595254,879792181,1069262793};
+		int k=1;
+		//op : 0
+		System.out.println(pairs(k,arr));
+	}
 	public  int pairs(int k, int[] arr) {
 		
 		int count=0;
