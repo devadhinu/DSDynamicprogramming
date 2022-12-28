@@ -63,15 +63,23 @@ public class SubArraysumdivisiblebyK {
 
 		int count=0;
 		int sum=0;
+		int remainder=0;
+		
 		HashMap<Integer,Integer> hm = new HashMap<>();
 		hm.put(0,1);
 		
 		for(int i=0;i<nums.length;i++)
 		{
+			sum=sum+nums[i];
+			remainder =sum%k;
 			
-			if(hm.containsKey(sum%k)) count+=hm.get(sum%k);
-			sum+=nums[i];
-			hm.put(sum,hm.getOrDefault(sum,0)+1);    
+			if(remainder<k)
+			{
+				remainder=remainder+k;	
+			}
+			if(hm.containsKey(remainder)) count+=hm.get(remainder);
+		
+			hm.put(remainder,hm.getOrDefault(remainder,0)+1);    
 
 		}
 
