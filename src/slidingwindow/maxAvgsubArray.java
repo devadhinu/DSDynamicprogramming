@@ -61,11 +61,17 @@ public class maxAvgsubArray {
 		int k = 1;  //output:5.0000
 		System.out.println(findMaxAverage(nums,k));
 	}
-
+//
+//	Next question
+//	644. Maximum Average Subarray II
+//	More challenges
+//	644. Maximum Average Subarray II
+//	2090. K Radius Subarray Averages
 
 	
 	public double findMaxAverage(int[] nums, int k) 
 	{
+
 
 	       int i=0,sum=0;
 			double avg = 0.00;

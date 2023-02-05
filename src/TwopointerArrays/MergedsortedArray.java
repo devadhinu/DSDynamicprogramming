@@ -54,6 +54,18 @@ public class MergedsortedArray {
 		arraymerge(nums1,nums2,m,n);
 	}
 
+	/*
+	 * Pseudocode: 
+	 * 1)Create a newArray taking the reference of first array nums1
+	 * with length m 
+	 * 2)Iterate through the two arrays with or condition on while
+	 * till the length of the two array sizes 
+	 * 3)Use pointer for new Arrays and left for nums1,right for nums2
+	 * 4)If pointer length meet m , copy nums2 into nums1(the result array)
+	 * 5)If right meets n, copy pointerArr into nums1(the result array)
+	 * 6)
+	 * 
+	 */
 	private int[] arraymerge(int[] nums1, int[] nums2, int m, int n)
 	{
 		int left=0,right=0;

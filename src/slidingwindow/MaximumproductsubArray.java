@@ -139,22 +139,26 @@ public class MaximumproductsubArray {
 	//maximum product using kandane algorithm
 	public int maxProductusingkandane(int[] nums)
 	{
-		int left=0,right=1;
+		
 		int product=1;	
-		int max=Integer.MIN_VALUE;
+		int max=nums[0];
 		int temp=Integer.MIN_VALUE;
 		
-       while(left<nums.length-1)
-       {
+        for(int i=0;i<nums.length;i++)
+        {
+    	   product*=nums[i];
     	   
-    	   product*=nums[left++];
-    	   
-    	   if(product==0)product=0;
-    	   if(product<0)product=1;
-           
-           max = Math.max(max, product);
-    	  
+    	   if(product==0)product=1;
+    	   if(max<product)max=product;
        } 
+        
+//        for(int i=nums.length-1;i>0;i--)
+//        {
+//    	   product*=nums[i];
+//    	   
+//    	   if(product==0)product=1;
+//    	   if(max<product)max=product;
+//       } 
        
 
 		return max;

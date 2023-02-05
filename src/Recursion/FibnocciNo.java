@@ -53,7 +53,6 @@ public class FibnocciNo {
 
 	private int findfib(int n) 
 	{
-		int result;
 		
 		if(n>=2)
 		{

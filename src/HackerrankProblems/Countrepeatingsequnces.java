@@ -95,7 +95,7 @@ public class Countrepeatingsequnces {
 		Assert.assertEquals(findCountrepeatingsequence(s), output);
 	}
 
-
+   //Sliding window problem -Hackerrank
 	public int findCountrepeatingsequence(String s) 
 	{
 		int left=0,right=1;

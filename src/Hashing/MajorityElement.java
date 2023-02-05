@@ -16,7 +16,8 @@ public class MajorityElement {
 		int k=3;
 		
 		//majorityElement(nums);
-		System.out.println(majorityElement(nums));
+	//	System.out.println(majorityElement(nums));
+		System.out.println(majorityElementhm(nums));
 	}
 	
 	/*
@@ -44,4 +45,24 @@ public class MajorityElement {
 		return 0;
     	
     }
+    
+    public int majorityElementhm(int[] nums) {
+    int value=0;
+    int max=0;
+    HashMap<Integer,Integer> hm = new HashMap<>();
+    for(int i=0;i<nums.length;i++)
+    {
+       hm.put(nums[i],hm.getOrDefault(nums[i],0)+1);
+    }
+     value= Collections.max(hm.values());
+     
+    for(Map.Entry<Integer,Integer> entry :hm.entrySet())
+    {
+       if(entry.getValue()==value)
+       {
+    	   max=entry.getKey();
+       }
+    }
+    return max;
+}
 }

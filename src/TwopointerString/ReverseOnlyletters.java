@@ -54,6 +54,7 @@ public class ReverseOnlyletters {
 		}
 		public String reverseOnlyLetters(String s)
 		{
+			
 			char[] ch =s.toCharArray();
 			int left=0,right=ch.length-1;
 			char temp=0;
@@ -61,7 +62,7 @@ public class ReverseOnlyletters {
 			//boolean a =false;
 			while(left<right)
 			{
-		
+				
 				if(Character.isAlphabetic(ch[left])==true) 
 				{
 					System.out.println("yes true");
